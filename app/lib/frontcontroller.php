@@ -1,5 +1,7 @@
 <?php
 namespace PHPMVC\lib;
+use PHPMVC\lib\Template\Template;
+
 class FrontController {
 
     const NOT_FOUND_ACTION = 'notFountAction';
@@ -37,16 +39,16 @@ class FrontController {
     {
         $ControllerClasName = 'PHPMVC\Controllers\\' . ucfirst($this->_controller) . 'Controller';
         $actionName = $this->_action . 'Action' ;
-        if(!class_exists($ControllerClasName)){
-            $ControllerClasName = self::NOT_FOUND_CONTROLLER;    
-        }
-        $controller = new $ControllerClasName();
-        
-        if(!method_exists($controller, $actionName))
-        {
+
+
+        if(!class_exists($ControllerClasName) || !method_exists($ControllerClasName, $actionName)) {
+            $ControllerClasName = self::NOT_FOUND_CONTROLLER;
             $this->_action = $actionName = self::NOT_FOUND_ACTION;
         }
 
+
+
+        $controller = new $ControllerClasName();      
         $controller->setController($this->_controller);
         $controller->setAction($this->_action);
         $controller->setaParams($this->_params);

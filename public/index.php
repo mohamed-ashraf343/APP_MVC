@@ -1,7 +1,7 @@
 <?php
 namespace PHPMVC;
 use  PHPMVC\lib\frontcontroller;
-use PHPMVC\lib\Template;
+use PHPMVC\lib\Template\Template;
 use PHPMVC\lib\SessionManager;
 
 

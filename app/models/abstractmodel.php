@@ -96,7 +96,7 @@ class AbstractModel
         $stmt = DatabaseHandler::factory()->prepare($sql);
         if ($stmt->execute() === true) {
             if(method_exists(get_called_class(), '__construct')) {
-                $obj = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, get_called_class(), array_keys(static::$tableSchema));
+                $obj = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, get_called_class(), array_keys(static::$tabelSchema));
             } else {
                 $obj = $stmt->fetchAll(\PDO::FETCH_CLASS, get_called_class());
             }
@@ -114,7 +114,7 @@ class AbstractModel
             $whereClause[] = $whereClauseColumns[$i] . ' = "' . $whereClauseValues[$i] . '"';
         }
         $whereClause = implode(' AND ', $whereClause);
-        $sql = 'SELECT * FROM ' . static::$tableName . '  WHERE ' . $whereClause;
+        $sql = 'SELECT * FROM ' . static::$tabelName . '  WHERE ' . $whereClause;
         return static::get($sql, $options);
     }
 

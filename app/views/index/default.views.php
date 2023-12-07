@@ -1,1 +1,2 @@
-<h1>WELCOM TO MVC WORLD</h1>    
+<?php
+echo "فارغ ";

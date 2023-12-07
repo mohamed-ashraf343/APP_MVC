@@ -61,9 +61,11 @@ body {
 .layout-boxed {
     background: url('../img/boxed-bg.jpg') repeat fixed
 }
+
 .num-1 {
     direction: rtl;
 }
+
 .content-wrapper,
 .right-side,
 .main-footer {
@@ -113,6 +115,22 @@ body {
     min-height: 100%;
     background-color: #ecf0f5;
     z-index: 800
+}
+
+.btn-l {
+    background: #398439;
+    color: #fff;
+    border: 5px solid #398439;
+    padding: 4px;
+    right: 36rem;
+    position: relative;
+    bottom: 3rem;
+}
+
+.btn-1 {
+    position: relative;
+    top: 3rem;
+    right: 23rem;
 }
 
 .main-footer {
@@ -3054,7 +3072,8 @@ a:focus {
     border: 1px solid #f4f4f4;
     background-color: #fff;
 }
-.titel-1{
+
+.titel-1 {
     text-align: center;
     margin: 2.5rem 0;
 }
