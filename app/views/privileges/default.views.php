@@ -1,6 +1,6 @@
 <h1>مرحبا بكم في الصلاحيات </h1>    
          
-<div class="container">     
+<div class="container">  
            <div class="num-1">        
            <h3 class="titel-1">عرض جدول الصلاحيات </h3>
            <a class="btn-l" href="privileges/create">إضافةصلاحية مستخدم</a>

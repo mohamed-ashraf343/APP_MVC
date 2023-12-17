@@ -27,7 +27,7 @@ class PrivilegesController extends AbstractController
             $privilege->PrivilegeTitle = $this->filterString($_POST['PrivilegeTitle']);
             $privilege->Privilege = $this->filterString($_POST['Privilege']);
             if($privilege->save())
-            {
+            {   
                 $this->redirect('/privileges');
             }
         }

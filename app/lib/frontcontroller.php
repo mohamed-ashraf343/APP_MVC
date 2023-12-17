@@ -1,6 +1,8 @@
 <?php
 namespace PHPMVC\lib;
 use PHPMVC\lib\Template\Template;
+use PHPMVC\lib\Registry;
+
 
 class FrontController {
 
@@ -11,9 +13,11 @@ class FrontController {
     private $_action = 'default';
     private $_params =array();
     private $_template;
+    private $_registry;
 
-    public function __construct(Template $template)
+    public function __construct(Template $template, Registry $registry)
     {
+        $this->_registry = $registry;
         $this->_template = $template;
         $this->_paresUrl();
     }
@@ -53,6 +57,7 @@ class FrontController {
         $controller->setAction($this->_action);
         $controller->setaParams($this->_params);
         $controller->setTemplate($this->_template);
+        $controller->setRegistry($this->_registry);
         $controller->$actionName();
         
        

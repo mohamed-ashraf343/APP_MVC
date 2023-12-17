@@ -9,7 +9,7 @@ class SessionManager extends \SessionHandler
     private $sessionSSL = false;
     private $sessionHTTPOnly = true;
     private $sessionPath = '/';
-    private $sessionDomain = '.www.app.mvc';
+    private $sessionDomain = '.app.mvc';
     private $sessionSavePath = SESSION_SAVE_PATH;
 
     private $sessionCipherAlgo = 'AES-128-ECB';
