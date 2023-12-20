@@ -33,13 +33,42 @@ body {
     overflow-x: hidden;
     overflow-y: auto
 }
-
+.action_view  {
+    direction: rtl;
+}
 .wrapper {
     min-height: 100%;
     position: relative;
     overflow: hidden
 }
-
+p.message {
+    font-size: 1.5rem;
+    background: #00e765;
+    color: #fff !important;
+    padding: 5px 10px;
+    line-height: 1.5;
+    margin: 15px 0 10px 0;
+    border-radius: 3px;
+    width: 30%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    direction: rtl;
+    display: block;
+    right: 70rem;
+}
+p.message.t1 {
+    background-color: #00733e;
+}
+p.message.t2 {
+    background-color: #730043;
+}
+p.message.t3 {
+    background-color: #001573;
+}
+p.message.t4 {
+    background-color: #520073;
+}
 .wrapper:before,
 .wrapper:after {
     content: " ";
@@ -49,7 +78,12 @@ body {
 .wrapper:after {
     clear: both
 }
-
+.titel-11 {
+    background-color: #00a65a;
+    color: #fff;
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
 .layout-boxed .wrapper {
     max-width: 1250px;
     margin: 0 auto;

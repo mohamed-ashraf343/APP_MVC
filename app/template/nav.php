@@ -98,6 +98,14 @@
             </section>
             <!-- /.sidebar -->
         </aside>
-
         
+        <div class="action_view <?= (isset($_COOKIE['menu_opened']) && $_COOKIE['menu_opened'] == 'true') ? 'collapsed no_animation' : '' ?>">
+<?php $messages = $this->messenger->getMessages(); if(!empty($messages)): foreach ($messages as $message): ?>
+<p  id="success" class="message t<?= $message[1] ?>"><?= $message[0] ?><a href="" class="closeBtn"><i class="fa fa-times"></i></a>   <script>
+                        $(document).ready(function(){
+                          $(success).fadeIn(1000).delay(9000).fadeOut(1000) ;
+                        });
+                    </script></p>
+<?php endforeach;endif; ?>
+
 

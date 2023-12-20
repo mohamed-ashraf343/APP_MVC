@@ -1,6 +1,7 @@
 <?php
 namespace PHPMVC\LIB;
 
+
 class SessionManager extends \SessionHandler
 {
 
@@ -43,7 +44,7 @@ class SessionManager extends \SessionHandler
 
     public function __get($key) {
         if(isset($_SESSION[$key])) {
-            $data = @unserialize($_SESSION[$key]);
+            $data = ($_SESSION[$key]) ;
             if($data === false) {
                 return $_SESSION[$key];
             } else {
@@ -100,7 +101,7 @@ class SessionManager extends \SessionHandler
         return true;
     }
 
-    private function checkSessionValidity()
+  private function checkSessionValidity()
     {
         if((time() - $this->sessionStartTime) > ($this->ttl * 60)) {
             $this->renewSession();
@@ -161,3 +162,4 @@ class SessionManager extends \SessionHandler
         parent::gc($maxLifetime);
     }
 }
+ob_flush();
