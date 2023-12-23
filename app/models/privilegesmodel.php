@@ -24,5 +24,6 @@ class PrivilegesModel extends AbstractModel  {
     
     protected static $primaryKey = 'PrivilegeId';
 
+
   
 }

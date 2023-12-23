@@ -160,7 +160,17 @@ p.message.t4 {
     position: relative;
     bottom: 3rem;
 }
-
+.num-1 a {
+    background-color: #408eba;
+    color: #fff;
+    padding: 10px 40px;
+ 
+}
+.fo {
+    padding: 0 5px;
+    background-color: #00a65a;
+    margin: 0 10px;
+}
 .btn-1 {
     position: relative;
     top: 3rem;
@@ -168,7 +178,7 @@ p.message.t4 {
 }
 
 .main-footer {
-    background: #605ca8;
+    background: #408eba;
     padding: 15px;
     color: #444;
     border-top: 1px solid #d2d6de;
@@ -1788,7 +1798,9 @@ a:focus {
     border-top: 3px solid #d2d6de;
     margin-bottom: 20px;
     width: 100%;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 40rem;
 }
 
 .box.box-primary {

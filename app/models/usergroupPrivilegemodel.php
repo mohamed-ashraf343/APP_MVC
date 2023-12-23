@@ -21,5 +21,18 @@ class UserGroupPrivilegeModel extends AbstractModel  {
     
     protected static $primaryKey = 'Id';
 
+
+    public static function getGroupprivileges(UserGroupModel $group){
+        $groupPrivileg = self::getBy(['GroupId' => $group->GroupId]);
+        $extractedprivilegesId = [];
+        if(false !== $groupPrivileg)
+        {
+           foreach($groupPrivileg as $privile)
+           {
+               $extractedprivilegesId[] =$privile->PrivilegeId;
+           }
+        }
+        return $extractedprivilegesId;
+    }
   
 }

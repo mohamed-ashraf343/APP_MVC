@@ -56,17 +56,8 @@ class UsersGroupController extends AbstractController
             $this->redirect('/usersgroup');
         }
          $this->_data['group'] = $group;
-         $this->_data['privileg'] = PrivilegesModel::getAll();
-         $groupPrivileg = UserGroupPrivilegeModel::getBy(['GroupId' => $group->GroupId]);
-         $extractedprivilegesId = [];
-         if(false !== $groupPrivileg)
-         {
-            foreach($groupPrivileg as $privile)
-            {
-                $extractedprivilegesId[] =$privile->PrivilegeId;
-            }
-         }
-         $this->_data['groupPrivileg'] = $extractedprivilegesId;
+         $this->_data['privileg'] = PrivilegesModel::getAll();    
+         $extractedprivilegesId = $this->_data['groupPrivileg'] = UserGroupPrivilegeModel::getGroupprivileges($group);
       
         //  var_dump( $this->_data['privileg']);
 

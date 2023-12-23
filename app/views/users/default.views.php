@@ -2,7 +2,7 @@
          
 <div class="container">     
            <div class="num-1">        
-           <a href="users/add">إضافة مستخدم جديد</a>
+           <a href="users/create">إضافة مستخدم جديد<i class="fa fa-plus fo"></i></a>
            <h3 class="titel-1">عرض بيانات الموظف</h3>
            <table class="table table-bordered">
                     <thead>
